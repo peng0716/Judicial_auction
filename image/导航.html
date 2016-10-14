@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+    body,div,ul,li,h2{margin: 0;padding: 0;font-size: 12px;font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif ;-webkit-user-select: none; }
+        ul,li{list-style: none;}
+        .box{margin: 50px auto;width: 150px;border: 1px solid #67b168;}
+        .box>li{border-bottom: 1px solid #CDE074;}
+        .box>li:last-child{border-bottom:none;}
+        .box h2{height: 35px;line-height: 35px;padding-left: 5px;font-size: 14px;background: #CDE074;cursor: pointer;border-bottom:1px solid #00b3ee;}
+        .box ul{padding-left: 10px;overflow: hidden;display: none;}
+        .box ul li{padding: 5px;font-size: 14px;}
+    </style>
+</head>
+<body>
+<ul class="box">
+    <li>
+        <h2>衬衣</h2>
+        <ul>
+            <li>短袖衬衣</li>
+            <li>长袖衬衣</li>
+            <li>短袖t恤</li>
+            <li>长袖txu</li>
+        </ul>
+    </li>
+    <li>
+        <h2>卫衣</h2>
+    <ul>
+        <li>套头卫衣</li>
+        <li>开衫卫衣</li>
+        <li>家居卫衣</li>
+        <li>休闲卫衣</li>
+    </ul>
+    </li>
+    <li>
+        <h2>裤子</h2>
+        <ul>
+            <li>牛仔裤</li>
+            <li>背带裤</li>
+            <li>西裤</li>
+            <li>休闲裤</li>
+        </ul>
+    </li>
+</ul>
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".box ul>li:contains('运动'),.box ul>li:contains('童装')").css("color","red");
+        $(".box h2").click(function(){
+            $(this).next()
+        })
+    })
+</script>
+</body>
+</html>
